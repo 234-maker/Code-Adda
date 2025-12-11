@@ -1,0 +1,24 @@
+public class types{
+    public static void main(String []args){
+    //types - primitive , non - premitive
+    //byte -1
+    //short -2
+    //int - 4  1,2,4....
+    //long -8  
+    //float - 4 4.56
+    //double - 8 
+    //char -2  a,b,c ,d
+    //boolean - 1 true/false 
+    //primitive-
+      /* byte age = 20;
+       int phone = 1234567890;
+       long phone2 = 12345678900L;
+       float pi = 3.14F;
+       char letter='a';
+       boolean isAdult=true;
+       */
+    //non-primitive
+      String name="Aman";
+      System.out.println(name.length());    
+    }
+}

@@ -1,0 +1,51 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class JDBC {
+    public static void main(String[] args) {
+        // Database details
+        String url = "jdbc:mysql://localhost:3306/testdb"; // Replace 'testdb' with your database name
+        String user = "root"; // MySQL username
+        String password = "1234"; // MySQL password
+
+        try {
+            // 1. Load MySQL JDBC Driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // 2. Establish Connection
+            Connection con = DriverManager.getConnection(url, user, password);
+            System.out.println("Database Connected Successfully!\n");
+
+            // 3. Prepare SQL query with parameter
+            String query = "SELECT id, name, age FROM students WHERE age > ?";
+            PreparedStatement pstmt = con.prepareStatement(query);
+
+            // 4. Set value for parameter
+            pstmt.setInt(1, 18); // fetch all students with age > 18
+
+            // 5. Execute query
+            ResultSet rs = pstmt.executeQuery();
+
+            // 6. Process the ResultSet
+            System.out.println("ID\tName\tAge");
+            System.out.println("-------------------");
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                int age = rs.getInt("age");
+
+                System.out.println(id + "\t" + name + "\t" + age);
+            }
+
+            // 7. Close resources
+            rs.close();
+            pstmt.close();
+            con.close();
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
