@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Student Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            min-height: 100vh
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px 0;
+            text-align: center
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            letter-spacing: 2px
+        }
+
+        nav {
+            margin-top: 10px
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s
+        }
+
+        nav a:hover {
+            color: #ffd700
+        }
+
+        section {
+            padding: 60px 10%;
+            min-height: 60vh
+        }
+
+        #about,
+        #projects,
+        #contact {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 30px 0;
+            border-radius: 10px;
+            padding: 40px
+        }
+
+        #about h2,
+        #projects h2,
+        #contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #ffd700
+        }
+
+        #about p {
+            text-align: center;
+            line-height: 1.6;
+            font-size: 1.1em
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px
+        }
+
+        .project {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s
+        }
+
+        .project:hover {
+            transform: translateY(-5px)
+        }
+
+        .project h3 {
+            color: #ffd700;
+            margin-bottom: 10px
+        }
+
+        .project p {
+            font-size: 0.95em;
+            line-height: 1.4
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto
+        }
+
+        form input,
+        form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px
+        }
+
+        form button {
+            background: #ffd700;
+            color: #000;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s
+        }
+
+        form button:hover {
+            background: #fff
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            font-size: 0.9em
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Student Portfolio</h1>
+        <nav> <a href="#about">About</a> <a href="#projects">Projects</a> <a href="#contact">Contact</a> </nav>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Undergraduate student pursuing a degree in Computer Science at XYZ University. Passionate about web
+            development, design, and creating innovative digital experiences. Skilled in HTML, CSS, JavaScript, and
+            eager to learn new technologies.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>A responsive personal portfolio built using HTML, CSS, and JavaScript to showcase academic and
+                    personal projects.</p>
+            </div>
+            <div class="project">
+                <h3>Library Management System</h3>
+                <p>A web-based system developed for managing book records and student borrowing activities using PHP and
+                    MySQL.</p>
+            </div>
+            <div class="project">
+                <h3>Weather App</h3>
+                <p>A JavaScript-based application that fetches real-time weather data using an external API and displays
+                    it dynamically.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contactForm"> <input type="text" id="name" placeholder="Full Name" required> <input type="email"
+                id="email" placeholder="Email Address" required> <textarea id="message" rows="5"
+                placeholder="Your Message" required></textarea> <button type="submit">Send Message</button> </form>
+    </section>
+    <footer>
+        <p>© 2025 Student Portfolio | Designed for University Showcase</p>
+    </footer>
+    <script> document.getElementById('contactForm').addEventListener('submit', function (e) { e.preventDefault(); alert('Message sent successfully!'); this.reset(); }); </script>
+</body>
+
+</html>
