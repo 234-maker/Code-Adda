@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Smart Placement System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="subpage">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2>Smart Placement System</h2>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html" class="active">Register</a></li>
+            <li><a href="predict.html">Predict</a></li>
+            <li><a href="skillgap.html">Skill Gap</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="menu-toggle">☰</div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline class="video-bg">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-network-lines-and-dots-27351-large.mp4" type="video/mp4">
+        </video>
+        <div class="header-content">
+            <h1>Create an Account</h1>
+            <p>Join the platform to access features like placement prediction and skill analysis.</p>
+        </div>
+    </header>
+
+    <!-- Registration Form Section -->
+    <section class="section register-section">
+        <div class="form-container glass-panel">
+            <h2>Student Registration</h2>
+            <form onsubmit="registerUser(event)" class="auth-form">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" placeholder="Doe" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="college">College/University</label>
+                        <input type="text" id="college" name="college" placeholder="ABC Institute of Technology" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Graduation Year</label>
+                        <select id="year" name="year" required>
+                            <option value="">Select Year</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="branch">Degree / Branch</label>
+                    <select id="branch" name="branch" required>
+                        <option value="">Select Branch</option>
+                        <option value="cse">Computer Science Engineering (CSE)</option>
+                        <option value="it">Information Technology (IT)</option>
+                        <option value="data">Data Science & AI</option>
+                        <option value="ece">Electronics & Communication</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the Terms of Service and Privacy Policy</label>
+                </div>
+
+                <button type="submit" class="cta-btn full-width">Register Now</button>
+                
+                <p class="auth-links">Already have an account? <a href="#">Login here</a></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-details">
+                <h3>Developed By</h3>
+                <p class="name"><a href="https://www.linkedin.com/in/aryan-srivastav-42462b19b" target="_blank" class="linkedin-link">Aryan Srivastav</a><br>Abhinav Mishra<br>Jyotirmay Singh</p>
+                <p class="role">3rd Year CSE</p>
+            </div>
+            <div class="footer-details">
+                <h3>Institution</h3>
+                <p>Shri Ramswaroop Memorial University</p>
+                <p>Class of 2027</p>
+            </div>
+            <div class="footer-details">
+                <h3>Mentorship</h3>
+                <p>Under the Guidance of: Ms. Neha Anand</p>
+                <p class="guide">Dr. Yusuf Perwej</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Smart Placement System. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

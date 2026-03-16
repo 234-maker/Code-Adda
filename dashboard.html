@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Smart Placement System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="subpage">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2>Smart Placement System</h2>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="predict.html">Predict</a></li>
+            <li><a href="skillgap.html">Skill Gap</a></li>
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="menu-toggle">☰</div>
+    </nav>
+
+    <!-- Dashboard Main Area -->
+    <main class="dashboard-container" style="margin-top: 5rem;">
+        
+        <header class="dashboard-header">
+            <div>
+                <h1>Welcome back, <span style="color: var(--primary);">John Doe</span></h1>
+                <p style="color: var(--text-muted); margin-top: 0.25rem;">B.Tech CSE - 2026 Batch | ABC Institute</p>
+            </div>
+            <div class="user-profile">
+                <div class="avatar">JD</div>
+            </div>
+        </header>
+
+        <!-- KPI Grid -->
+        <div class="dashboard-grid">
+            <div class="dash-card">
+                <h3>Placement Probability</h3>
+                <div class="value success" id="dash-prob">--%</div>
+                <div class="trend" id="dash-prob-trend">Complete Prediction</div>
+            </div>
+            <div class="dash-card">
+                <h3>Projects Built</h3>
+                <div class="value primary" id="dash-proj">--</div>
+                <div class="trend">Based on profile</div>
+            </div>
+            <div class="dash-card">
+                <h3>Skills Mastered</h3>
+                <div class="value primary" id="dash-skills">--</div>
+                <div class="trend">Based on profile</div>
+            </div>
+            <div class="dash-card">
+                <h3>Missing Critical Skills</h3>
+                <div class="value warning" id="dash-missing">--</div>
+                <div class="trend" style="color: #f59e0b;" id="dash-missing-trend">Run Gap Analyzer</div>
+            </div>
+        </div>
+
+        <div class="dashboard-content-grid">
+            
+            <!-- Left Panel: Skill Analysis -->
+            <section class="panel">
+                <h2>Skill Gap Analysis (Target: Backend Developer)</h2>
+                
+                <div class="skills-wrapper" style="margin-top: 2rem;">
+                    
+                    <div class="skill-bar">
+                        <div class="label-row">
+                            <span>Java / Spring Boot</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="label-row">
+                            <span>MySQL & Database Design</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="label-row">
+                            <span>Docker & Deployment</span>
+                            <span>20% (Needs Work)</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 20%; background: #f59e0b;"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1.5rem; text-align: center;">
+                        <a href="skillgap.html" class="cta-btn" style="padding: 0.75rem 1.5rem; font-size: 0.95rem;">Re-Analyze Skills</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Right Panel: Recent Activity & Jobs -->
+            <section class="panel">
+                <h2>Recent Activity</h2>
+                <ul class="activity-list">
+                    <li>
+                        <span class="activity-date">Today</span>
+                        <span class="activity-detail">Completed Java Advanced Course</span>
+                    </li>
+                    <li>
+                        <span class="activity-date">Mar 12</span>
+                        <span class="activity-detail">Updated resume on profile</span>
+                    </li>
+                    <li>
+                        <span class="activity-date">Mar 10</span>
+                        <span class="activity-detail">Ran placement prediction (82%)</span>
+                    </li>
+                    <li>
+                        <span class="activity-date">Mar 05</span>
+                        <span class="activity-detail">Added new project: E-commerce App</span>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-details">
+                <h3>Developed By</h3>
+                <p class="name"><a href="https://www.linkedin.com/in/aryan-srivastav-42462b19b" target="_blank" class="linkedin-link">Aryan Srivastav</a><br>Abhinav Mishra<br>Jyotirmay Singh</p>
+                <p class="role">3rd Year CSE</p>
+            </div>
+            <div class="footer-details">
+                <h3>Institution</h3>
+                <p>Shri Ramswaroop Memorial University</p>
+                <p>Class of 2027</p>
+            </div>
+            <div class="footer-details">
+                <h3>Mentorship</h3>
+                <p>Under the Guidance of: Ms. Neha Anand</p>
+                <p class="guide">Dr. Yusuf Perwej</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Smart Placement System. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

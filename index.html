@@ -1,30 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DF Youtube -Your distraction free version of Youtube</title>
+    <title>Smart Placement System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <h1>Distraction free videos</h1>
-    <div><a href="music.html">
-        <img height="300" src="https://images.pexels.com/photos/144429/pexels-photo-144429.jpeg?_gl=1*16wlw8t*_ga*MTUzMjM5NzU3Ni4xNzYwMTA1OTUz*_ga_8JE65Q40S6*czE3NjY1
-        NTgxMjkkbzUkZzEkdDE3NjY1NTgyNTYkajQ0JGwwJGgw" alt="music image">
-        <div>Music</div></a>
-        <br>
-    </div>
-    <div><a href="gaming.html">
-        <img height="300" src="https://images.pexels.com/photos/371924/pexels-photo-371924.jpeg?_gl=1*1ei1gax*_ga*MTUzMjM5NzU3Ni4xNzYwMTA1OTUz*_ga_8JE65Q40S6*czE3NjY1NTgxMjkkbzUkZzEkdDE3NjY1NTg3OTUkajQzJGwwJGgw" alt="gaming image">
-        <div>Gaming</div></a>
-        <br>
-    </div>
-    <div><a href="programming.html">
-        <img height="300" src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?_gl=1*18m4vdo*_ga*MTUzMjM5NzU3Ni4xNzYwMTA1OTUz*_ga_8JE65Q40S6*czE3NjY2MzE3MzckbzYkZzEkdDE3NjY2MzE3NTkkajM4JGwwJGgw" alt="programming image">
-        <div>Programming</div></a>
-        <br>
-    </div>
-</body>
+    <!-- 1. Navbar -->
+    <nav class="navbar">
+        <h2>Smart Placement System</h2>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="predict.html">Predict</a></li>
+            <li><a href="skillgap.html">Skill Gap</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="menu-toggle">☰</div>
+    </nav>
 
+    <!-- 2. Hero Section -->
+    <header class="hero">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline class="video-bg">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-network-lines-and-dots-27351-large.mp4" type="video/mp4">
+        </video>
+        
+        <div class="hero-content">
+            <h1>AI-Powered Smart Placement & Skill Gap Analyzer</h1>
+            <p>Predict placement chances and improve missing skills instantly.</p>
+            <button class="cta-btn" onclick="location.href='predict.html'">Get Started</button>
+        </div>
+        
+        <!-- Decorative shapes to make background richer -->
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+
+        <!-- Floating Tech Emojis -->
+        <div class="floating-emoji e-1">💻</div>
+        <div class="floating-emoji e-2">🚀</div>
+        <div class="floating-emoji e-3">🤖</div>
+        <div class="floating-emoji e-4">📊</div>
+        <div class="floating-emoji e-5">⚙️</div>
+    </header>
+
+    <!-- 3. How It Works Section -->
+    <section class="section how-it-works-section">
+        <div class="section-header">
+            <h2>How It Works</h2>
+            <p>Three simple steps to boost your career</p>
+        </div>
+        <div class="how-it-works">
+            <div class="card">
+                <div class="icon-wrapper"><span class="step-num">1</span></div>
+                <h3>Enter Details</h3>
+                <p>Input your academic records, projects, and current skill set into our secure system.</p>
+            </div>
+            <div class="card">
+                <div class="icon-wrapper"><span class="step-num">2</span></div>
+                <h3>AI Prediction</h3>
+                <p>Our machine learning model analyzes your profile to accurately predict placement probability.</p>
+            </div>
+            <div class="card">
+                <div class="icon-wrapper"><span class="step-num">3</span></div>
+                <h3>Skill Recommendation</h3>
+                <p>Discover exact skill gaps for your target role and get personalized improvement suggestions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Features Section -->
+    <section class="section features-section">
+        <div class="section-header">
+            <h2>Key Features</h2>
+        </div>
+        <div class="features">
+            <div class="feature-box">
+                <div class="check-icon">✔</div>
+                <span>Placement Probability</span>
+            </div>
+            <div class="feature-box">
+                <div class="check-icon">✔</div>
+                <span>Skill Gap Analysis</span>
+            </div>
+            <div class="feature-box">
+                <div class="check-icon">✔</div>
+                <span>Role Matching</span>
+            </div>
+            <div class="feature-box">
+                <div class="check-icon">✔</div>
+                <span>Career Recommendations</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Tech Stack Section -->
+    <section class="section tech-stack-section">
+        <div class="section-header">
+            <h2>Technology Stack</h2>
+        </div>
+        <div class="tech-stack">
+            <div class="tech-card">
+                <span class="tech-title">Backend</span>
+                <strong class="tech-name">Spring Boot</strong>
+            </div>
+            <div class="tech-card">
+                <span class="tech-title">Machine Learning</span>
+                <strong class="tech-name">Weka</strong>
+            </div>
+            <div class="tech-card">
+                <span class="tech-title">Database</span>
+                <strong class="tech-name">MySQL</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-details">
+                <h3>Developed By</h3>
+                <p class="name"><a href="https://www.linkedin.com/in/aryan-srivastav-42462b19b" target="_blank" class="linkedin-link">Aryan Srivastav</a><br>Abhinav Mishra<br>Jyotirmay Singh</p>
+                <p class="role">3rd Year CSE</p>
+            </div>
+            <div class="footer-details">
+                <h3>Institution</h3>
+                <p>Shri Ramswaroop Memorial University</p>
+                <p>Class of 2027</p>
+            </div>
+            <div class="footer-details">
+                <h3>Mentorship</h3>
+                <p>Under the Guidance of: Ms. Neha Anand</p>
+                <p class="guide">Dr. Yusuf Perwej</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Smart Placement System. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
